@@ -10,7 +10,7 @@ const ibmPlexSerif = IBM_Plex_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Tucupy bank",
+  title: "Tucupy Bank",
   description: "Modern banking plataform for everyone",
   icons: {
     icon: '/icons/logo.svg',
