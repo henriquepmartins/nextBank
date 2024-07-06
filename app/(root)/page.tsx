@@ -1,6 +1,8 @@
 import HeaderBox from "@/components/HeaderBox";
 import TotalBalanceBox from "@/components/TotalBalanceBox";
 import RightSideBar from "@/components/ui/RightSideBar";
+import { Columns } from "./payments/Columns.tsx";
+import { DataTable } from "./payments/DataTable";
 import React from "react";
 
 const Home = () => {
@@ -29,6 +31,8 @@ const Home = () => {
         transactions={[]}
         banks={[{ currentBalance: 123.50 }, { currentBalance: 500.50 }]}
       />
+     
+
     </section>
   );
 };

@@ -299,6 +299,11 @@
     @apply text-14 cursor-pointer font-medium text-bankGradient;
   }
 
+  .auth-form-logo {
+    width: 150px; /* Defina o tamanho desejado */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
   /* Payment Transfer */
   .payment-transfer {
     @apply no-scrollbar flex flex-col overflow-y-scroll bg-gray-25 p-8 md:max-h-screen xl:py-12;
