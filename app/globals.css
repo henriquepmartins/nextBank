@@ -8,6 +8,19 @@
   box-sizing: border-box;
 }
 
+.bg-success {
+  background-color: #d4edda54;
+}
+
+.bg-failed {
+  background-color: #f8d7da67; /* vermelho claro pastel */
+}
+
+.bg-processing {
+  background-color: #fff3cd65; /* amarelo claro pastel */
+}
+
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;

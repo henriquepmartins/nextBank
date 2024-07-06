@@ -259,9 +259,18 @@ export function DataTableDemo() {
                 <TableRow
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
+                  className={
+                    row.original.status === "success"
+                      ? "bg-success"
+                      : row.original.status === "failed"
+                      ? "bg-failed"
+                      : row.original.status === "processing"
+                      ? "bg-processing"
+                      : ""
+                  }
                 >
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
+                    <TableCell className="pl-2 pr-10 font-semibold" key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
