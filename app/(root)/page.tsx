@@ -1,17 +1,20 @@
 import HeaderBox from "@/components/HeaderBox";
 import TotalBalanceBox from "@/components/TotalBalanceBox";
 import RightSideBar from "@/components/ui/RightSideBar";
-import { Columns } from "./payments/Columns.tsx";
-import { DataTable } from "./payments/DataTable";
+import { DataTableDemo } from "@/components/TableConfig";
 import React from "react";
 
 const Home = () => {
-  const loggedIn = { firstName: "Henrique", lastName: "Martins", email: "contact@henriquepereira.com" };
+  const loggedIn = {
+    firstName: "Henrique",
+    lastName: "Martins",
+    email: "contact@henriquepereira.com",
+  };
   return (
     <section className="home">
       <div className="home-content">
         <header className="home-header">
-          <HeaderBox 
+          <HeaderBox
             type="greeting"
             title="Bem Vindo,"
             user={loggedIn?.firstName || "Guest"}
@@ -25,14 +28,15 @@ const Home = () => {
           />
         </header>
         Transações Recentes
+        <DataTableDemo />
       </div>
       <RightSideBar
         user={loggedIn}
         transactions={[]}
-        banks={[{ currentBalance: 123.50 }, { currentBalance: 500.50 }]}
+        banks={[{ currentBalance: 123.5 }, { currentBalance: 500.5 }]}
       />
-     
 
+      
     </section>
   );
 };
