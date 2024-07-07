@@ -40,31 +40,31 @@ const data: Payment[] = [
   {
     id: "m5gr84i9",
     amount: 316,
-    status: "success",
+    status: "sucesso",
     email: "ken99@yahoo.com",
   },
   {
     id: "3u1reuv4",
     amount: 242,
-    status: "success",
+    status: "sucesso",
     email: "Abe45@gmail.com",
   },
   {
     id: "derv1ws0",
     amount: 837,
-    status: "processing",
+    status: "processando",
     email: "Monserrat44@gmail.com",
   },
   {
     id: "5kma53ae",
     amount: 874,
-    status: "success",
+    status: "sucesso",
     email: "Silas22@gmail.com",
   },
   {
     id: "bhqecj4p",
     amount: 721,
-    status: "failed",
+    status: "falhou",
     email: "carmella@hotmail.com",
   },
 ]
@@ -72,7 +72,7 @@ const data: Payment[] = [
 export type Payment = {
   id: string
   amount: number
-  status: "pending" | "processing" | "success" | "failed"
+  status: "pending" | "processando" | "sucesso" | "falhou"
   email: string
 }
 
@@ -260,12 +260,12 @@ export function DataTableDemo() {
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
                   className={
-                    row.original.status === "success"
-                      ? "bg-success"
-                      : row.original.status === "failed"
-                      ? "bg-failed"
-                      : row.original.status === "processing"
-                      ? "bg-processing"
+                    row.original.status === "sucesso"
+                      ? "bg-sucesso"
+                      : row.original.status === "falhou"
+                      ? "bg-falhou"
+                      : row.original.status === "processando"
+                      ? "bg-processando"
                       : ""
                   }
                 >

@@ -1,11 +1,21 @@
 import React from 'react'
+import TabelaHistorico from '@/components/Transaction'
+import TransactionGraphs from '@/components/Graficos'
+import HeaderBox from '@/components/HeaderBox'
 
-const TransactionHistory = () => {
+const page = () => {
   return (
-    <div>
-      
-    </div>
+    <section className='transactions'>
+      <div className='transactions-header'>
+        <HeaderBox 
+        title='Histórico de Transações'
+        subtext='Veja o histórico de transações realizadas.'
+        />
+      </div>
+      <TabelaHistorico />
+      <TransactionGraphs />
+    </section>
   )
 }
 
-export default TransactionHistory
+export default page
